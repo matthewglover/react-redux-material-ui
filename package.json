@@ -4,7 +4,8 @@
   "description": "React, redux, material-ui front end",
   "main": "index.js",
   "scripts": {
-    "test": "ava",
+    "precommit": "npm test",
+    "test": "npm run lint && ava",
     "clean": "rimraf './public/*.+(js|css|html)'",
     "build": "webpack --config ./webpack.production.config.js --progress",
     "dev": "webpack-dev-server --progress",
@@ -34,6 +35,7 @@
     "eslint-plugin-react": "^6.1.2",
     "extract-text-webpack-plugin": "^1.0.1",
     "html-webpack-plugin": "^2.22.0",
+    "husky": "^0.11.6",
     "json-loader": "^0.5.4",
     "node-sass": "^3.8.0",
     "react-transform-hmr": "^1.0.4",
