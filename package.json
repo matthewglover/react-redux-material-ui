@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "precommit": "npm run lint && npm test",
-    "test": "nyc ava --verbose",
+    "ava": "ava --verbose --require babel-register",
+    "test": "nyc npm run ava",
     "clean": "rimraf './public/*.+(js|css|html)'",
     "build": "webpack --config ./webpack.production.config.js --progress",
     "dev": "webpack-dev-server --progress",
