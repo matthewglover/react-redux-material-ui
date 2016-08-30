@@ -4,6 +4,9 @@ test('True is true', t => {
   t.ok(true);
 });
 
+test('Deep equals', t => {
+  t.deepEqual([], []);
+});
 
 const delayed = () =>
   new Promise((resolve) => {
