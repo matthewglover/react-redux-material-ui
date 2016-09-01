@@ -6,11 +6,14 @@ import {
   setVisibilityFilter } from '../../app/action_creators';
 
 test('addTodo', t => {
-  t.deepEqual(addTodo('test todo'), { type: ADD_TODO, text: 'test todo' });
+  const todo = addTodo('test todo');
+  t.plan(2);
+  t.deepEqual(todo, { type: ADD_TODO, text: 'test todo', id: todo.id });
+  t.is(typeof todo.id, 'string');
 });
 
 test('toggleTodo', t => {
-  t.deepEqual(toggleTodo(1), { type: TOGGLE_TODO, index: 1 });
+  t.deepEqual(toggleTodo(1), { type: TOGGLE_TODO, id: 1 });
 });
 
 test('setVisibilityFilter', t => {

@@ -10,10 +10,10 @@ const TodoList = ({ todos, onTodoClick }) =>
   (<List
     style={style}
   >
-    { todos.map((todo, idx) =>
+    { todos.map((todo) =>
       <Todo
-        key={idx}
-        onClick={() => onTodoClick(idx)}
+        key={todo.id}
+        onClick={() => onTodoClick(todo.id)}
         {...todo}
       />)}
   </List>);

@@ -25,7 +25,7 @@ const mapStateToProps = state =>
 
 // mapDispatchToProps :: Function -> { onTodoClick: Function }
 const mapDispatchToProps = dispatch =>
-  ({ onTodoClick: idx => dispatch(toggleTodo(idx)) });
+  ({ onTodoClick: id => dispatch(toggleTodo(id)) });
 
 // connector :: Function
 const connector =
