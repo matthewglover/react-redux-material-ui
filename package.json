@@ -50,9 +50,11 @@
   },
   "dependencies": {
     "hapi-wrapper": "git+https://github.com/matthewglover/hapi-wrapper.git",
+    "material-ui": "^0.15.4",
     "react": "^15.3.1",
     "react-dom": "^15.3.1",
     "react-redux": "^4.4.5",
+    "react-tap-event-plugin": "^1.0.0",
     "redux": "^3.5.2"
   }
 }

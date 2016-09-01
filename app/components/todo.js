@@ -1,15 +1,16 @@
 import React, { PropTypes } from 'react';
+import { ListItem } from 'material-ui/List';
+import Checkbox from 'material-ui/Checkbox';
 
 const styles = completed =>
   ({ textDecoration: completed ? 'line-through' : 'none' });
 
-const Todo = ({ onClick, completed, text }) =>
-  (<li
-    onClick={onClick}
+const Todo = ({ onClick, text, completed }) =>
+  (<ListItem
+    leftCheckbox={<Checkbox onClick={onClick} checked={completed} />}
+    primaryText={text}
     style={styles(completed)}
-  >
-    {text}
-  </li>);
+  />);
 
 Todo.propTypes = {
   onClick: PropTypes.func.isRequired,

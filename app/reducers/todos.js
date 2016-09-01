@@ -13,8 +13,14 @@ const toggleTodo = (state, index) =>
     return Object.assign({}, todo, { completed: !todo.completed });
   });
 
+const testTodos = [
+  { text: 'apple', completed: false },
+  { text: 'orange', completed: false },
+  { text: 'banana', completed: false },
+];
+
 // todos :: [Todo] -> Action -> [Todo]
-const todos = (state = [], action) => {
+const todos = (state = testTodos, action) => {
   switch (action.type) {
     case ADD_TODO:
       return addTodo(state, action.text);

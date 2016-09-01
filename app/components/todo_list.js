@@ -1,15 +1,22 @@
 import React, { PropTypes } from 'react';
+import { List } from 'material-ui/List';
 import Todo from './todo';
 
+const style = {
+  width: '100%',
+};
+
 const TodoList = ({ todos, onTodoClick }) =>
-  (<ul>
+  (<List
+    style={style}
+  >
     { todos.map((todo, idx) =>
       <Todo
         key={idx}
         onClick={() => onTodoClick(idx)}
         {...todo}
       />)}
-  </ul>);
+  </List>);
 
 const todos = PropTypes.shape({
   text: PropTypes.string.isRequired,
