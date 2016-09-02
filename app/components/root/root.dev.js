@@ -1,7 +1,7 @@
 import React, { PropTypes } from 'react';
 import { Provider } from 'react-redux';
 import App from '../app';
-import DevTools from '../dev_tools';
+import DevTools from '../../containers/dev_tools';
 
 const Root = ({ store }) =>
   <Provider store={store}>

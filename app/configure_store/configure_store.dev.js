@@ -6,7 +6,7 @@ import { createStore, compose } from 'redux';
 import { persistState } from 'redux-devtools';
 
 import rootReducer from '../reducers';
-import DevTools from '../components/dev_tools';
+import DevTools from '../containers/dev_tools';
 
 
 const enhancer = compose(
