@@ -1,5 +1,4 @@
 language: node_js
-
 node_js:
   - '6'
 
@@ -10,12 +9,17 @@ cache:
   directories:
     - node_modules
 
-before_script:
-  npm prune
+before_script: npm prune
 
 script:
   - npm run lint
   - npm test
 
 after_success:
-    - './node_modules/.bin/nyc report --reporter=text-lcov | ./node_modules/.bin/coveralls'
+  - "./node_modules/.bin/nyc report --reporter=text-lcov | ./node_modules/.bin/coveralls"
+
+before_deploy:
+  - npm run build
+deploy:
+  api_key:
+    secure: oLlPZuIoxws5bWbFeaaYHLuDbqQeZyv4LfaGNE/mXnJodSKqM4f1jQROZHX/RqDDjuy103ZFf9+0PETvrbQpMjHJamJg1ZzwOgwLjR+MAcEJz+mf1zuMBZb4er67i+rpZAKVKsuuA/G8WW+emVg0kXSLhW/VLVpojq2df2mPsOSlYPEikMScGiZN1BIS6dQY5DjmLaICfXJCNBbpt/kXfq3PSsIAWRqoXx5VjGTaExLL6sPk34x6pV5bEXJnK2m+p1/TCK1BrVUVLenJjVzsxwYlaMHnYJsTTNkarVJ5qOFGrvny5r2q34bWlJxNUK3/GAE89F47HMH0wu2QBUqAPfbsXWuR9N8KeT+Ykqq2yH5FWVgWNGZ7VEIkh3dIWK8BXqZc5FWw2Hq1O98E2F7rezynoxdTVOx6KkesMXxcswyf+fCMEeJCysz0rbutiFitKxNxmxXwXpl4RRIW87Hl3l+cY5eoDpP9qLY7qNDMkUTLIsXboJe/L8JWGt3MwPvKiRHwJMoHNVuShDBxvIYJkQOo+vqGPRsJJ4M2GB6v6xu1eR+UfwWqvdZOwLmiIWMcyJPk/dOdJlzoCxg93mrVeFjLwXFj5t1T03u3ZaBlJh1Hv7a27gnRSbWAeuDSWyxKGbSaVxDgn5fbQ+jETloV07UpW5NY+M4FnRBA1rUuSKI=
