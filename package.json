@@ -10,7 +10,8 @@
     "clean": "rimraf './public/*.+(js|css|html)'",
     "build": "webpack --config ./webpack.production.config.js --progress",
     "dev": "node webpack_server",
-    "lint": "eslint './+(app|test)/**/*.js'"
+    "lint": "eslint './+(app|test)/**/*.js'",
+    "start": "node server"
   },
   "repository": {
     "type": "git",

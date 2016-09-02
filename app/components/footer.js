@@ -22,7 +22,7 @@ const Footer = () =>
       onTouchTap={() => console.log('Clicked favourites')}
     />
     <BottomNavigationItem
-      label="Nearby"
+      label="Nearbys"
       icon={nearbyIcon}
       onTouchTap={() => console.log('Clicked nearby')}
     />

@@ -1,6 +1,6 @@
 const hapiWrapper = require('hapi-wrapper');
 
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 4000;
 const connectionOptions = { port };
 const plugins = [];
 const routes = [];

@@ -1,12 +1,13 @@
 import React, { PropTypes } from 'react';
 import { Provider } from 'react-redux';
-import App from './app';
+import App from '../app';
+import DevTools from '../dev_tools';
 
 const Root = ({ store }) =>
   <Provider store={store}>
     <div>
-      <div>Hello Worlds!</div>
       <App />
+      <DevTools />
     </div>
   </Provider>;
 
