@@ -15,7 +15,7 @@ const DevTools = createDevTools(
     changePositionKey="ctrl-q"
     defaultPosition="bottom"
   >
-    <LogMonitor />
+    <LogMonitor theme="solarized" />
   </DockMonitor>
 );
 

@@ -5,8 +5,8 @@ import { createStore, compose } from 'redux';
 // eslint-disable-next-line import/no-extraneous-dependencies
 import { persistState } from 'redux-devtools';
 
-import rootReducer from './reducers';
-import DevTools from './components/dev_tools';
+import rootReducer from '../reducers';
+import DevTools from '../components/dev_tools';
 
 
 const enhancer = compose(
@@ -19,7 +19,7 @@ const configureStore = initialState => {
 
   if (module.hot) {
     // eslint-disable-next-line global-require
-    module.hot.accept('./reducers', () => store.replaceReducer(require('./reducers').default));
+    module.hot.accept('../reducers', () => store.replaceReducer(require('../reducers').default));
   }
 
   return store;
