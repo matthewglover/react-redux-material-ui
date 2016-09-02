@@ -1,4 +1,5 @@
 import React from 'react';
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import Paper from 'material-ui/Paper';
 import Footer from './footer';
 import AddTodo from '../containers/add_todo';
@@ -12,12 +13,12 @@ const style = {
 };
 
 const App = () =>
-  (<Paper
-    style={style}
-  >
-    <AddTodo />
-    <VisibleTodoList />
-    <Footer />
-  </Paper>);
+  <MuiThemeProvider>
+    <Paper style={style}>
+      <AddTodo />
+      <VisibleTodoList />
+      <Footer />
+    </Paper>
+  </MuiThemeProvider>;
 
 export default App;

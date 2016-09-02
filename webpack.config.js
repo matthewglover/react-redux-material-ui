@@ -4,11 +4,16 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
   devtool: 'source-map',
 
-  entry: `${__dirname}/app/main.js`,
+  entry: [
+    'webpack-dev-server/client?http://localhost:3000',
+    'webpack/hot/only-dev-server',
+    'react-hot-loader/patch',
+    `${__dirname}/app/main.js`,
+  ],
 
   output: {
     path: `${__dirname}/public`,
-    filename: 'bundle.js'
+    filename: 'bundle.js',
   },
 
   module: {
@@ -23,13 +28,4 @@ module.exports = {
     new HtmlWebpackPlugin({ template: `${__dirname}/app/index.tmpl.html` }),
     new HotModuleReplacementPlugin()
   ],
-
-  // Uses default port 8080
-  devServer: {
-    contentBase: './public',
-    colors: true,
-    historyApiFallback: true,
-    inline: true,
-    hot: true
-  }
 };
