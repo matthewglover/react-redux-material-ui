@@ -3,6 +3,7 @@ import { VisibilityFilters } from '../constants';
 import { toggleTodo } from '../action_creators';
 import TodoList from '../components/todo_list';
 
+
 // type State = { todos: [Todo], visibilityFilter: String }
 
 // getVisibleTodos :: State -> [Todo]

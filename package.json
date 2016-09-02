@@ -4,6 +4,7 @@
   "description": "React, redux, material-ui front end",
   "main": "index.js",
   "scripts": {
+    "storybook": "start-storybook -p 9001 -c .storybook",
     "precommit": "npm run lint && npm test",
     "ava": "ava --verbose --require babel-register",
     "test": "nyc npm run ava",
@@ -51,6 +52,7 @@
     "webpack-dev-server": "^1.15.0"
   },
   "dependencies": {
+    "@kadira/storybook": "^2.9.1",
     "hapi-wrapper": "git+https://github.com/matthewglover/hapi-wrapper.git",
     "material-ui": "^0.15.4",
     "react": "^15.3.1",

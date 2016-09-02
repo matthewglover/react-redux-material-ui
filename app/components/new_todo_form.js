@@ -2,6 +2,10 @@ import React, { PropTypes, Component } from 'react';
 import TextField from 'material-ui/TextField';
 import autoBind from '../lib/auto_bind';
 
+const style = {
+  width: '100%',
+};
+
 class NewTodoForm extends Component {
 
   // NOTE: https://discuss.reactjs.org/t/should-we-include-the-props-parameter-to-class-constructors-when-declaring-components-using-es6-classes/2781
@@ -26,16 +30,15 @@ class NewTodoForm extends Component {
 
   render() {
     return (
-      <div>
-        <form onSubmit={this.onSubmit}>
-          <TextField
-            id="newTodo"
-            hintText="Add todo"
-            value={this.state.value}
-            onChange={this.onChange}
-          />
-        </form>
-      </div>
+      <form onSubmit={this.onSubmit} style={style}>
+        <TextField
+          id="newTodo"
+          hintText="Add todo"
+          value={this.state.value}
+          onChange={this.onChange}
+          style={{ width: '100%' }}
+        />
+      </form>
     );
   }
 }
