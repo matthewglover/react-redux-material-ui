@@ -6,7 +6,6 @@ const style = {
   width: '100%',
   display: 'flex',
   justifyContent: 'space-between',
-  border: '1px solid red',
 };
 
 const Header = () =>

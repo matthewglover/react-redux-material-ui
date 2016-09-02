@@ -7,7 +7,7 @@ const style = {
 };
 
 const TodoList = ({ todos, onTodoClick }) =>
-  (<List
+  <List
     style={style}
   >
     { todos.map((todo) =>
@@ -16,7 +16,7 @@ const TodoList = ({ todos, onTodoClick }) =>
         onClick={() => onTodoClick(todo.id)}
         {...todo}
       />)}
-  </List>);
+  </List>;
 
 const todos = PropTypes.shape({
   text: PropTypes.string.isRequired,

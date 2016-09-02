@@ -6,11 +6,11 @@ const styles = completed =>
   ({ textDecoration: completed ? 'line-through' : 'none' });
 
 const Todo = ({ onClick, text, completed }) =>
-  (<ListItem
+  <ListItem
     leftCheckbox={<Checkbox onClick={onClick} checked={completed} />}
     primaryText={text}
     style={styles(completed)}
-  />);
+  />;
 
 Todo.propTypes = {
   onClick: PropTypes.func.isRequired,
