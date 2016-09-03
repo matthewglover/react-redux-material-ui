@@ -4,12 +4,18 @@
 
 ## What?
 
-A boilerplate frontend app using: React, Redux and Material-UI, Webpack, Sass and AVA.
+A boilerplate React, Redux, Material-UI application.
 
 ## Why?
 
-There's lots of setup just to getting a simple app up and running. This boilerplate sets up a simple working app with tests and integrations with Travis and Coveralls.
+This boilerplate tries to set out a sensible default configuration for developing a front-end React application, combining popular libraries. It includes build tooling, tests, continuous integration and automated deployment.
 
 ## How?
 
-tbd
+Frontend: React, Redux.
+
+Testing: AVA
+
+Build tooling: Webpack, Sass, Babel.
+
+Deployment: Travis-ci, Coveralls.
