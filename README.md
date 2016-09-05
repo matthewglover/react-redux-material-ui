@@ -36,9 +36,9 @@ Webpack hot module reloading implemented to work on changes to both React and Re
 
 ### Linting
 
-This boilerplate uses ESLint with the AirBNB rules, modified to allow JSX in .js files.
+This boilerplate uses ESLint with the AirBnB rules, modified to allow JSX in .js files.
 
-The AirBNB rules have also been modified to work better with AVA (primarily by using the babel-eslint parser).
+The AirBmB rules have also been modified to work better with AVA (primarily by using the babel-eslint parser).
 
 ### Testing
 
