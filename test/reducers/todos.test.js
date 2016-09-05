@@ -23,7 +23,7 @@ test('mutating frozen data throws error', t => {
 test('addTodo action adds a new todo to list', t => {
   const todoAction = addTodo('first todo');
   const actual = todos([], todoAction);
-  t.deepEqual(actual, [{ text: todoAction.text, id: todoAction.id, completed: false }]);
+  t.deepEqual(actual, [{ text: 'first todo', id: todoAction.id, completed: false }]);
 });
 
 test('addTodo action adds a new todo to end of list', t => {
@@ -31,7 +31,7 @@ test('addTodo action adds a new todo to end of list', t => {
   const actual = todos(oneTodo, todoAction);
   const expected = [
     ...oneTodo,
-    { text: todoAction.text, id: todoAction.id, completed: false },
+    { text: 'second todo', id: todoAction.id, completed: false },
   ];
 
   t.deepEqual(actual, expected);
