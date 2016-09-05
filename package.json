@@ -5,8 +5,9 @@
   "main": "index.js",
   "scripts": {
     "storybook": "start-storybook -p 9001 -c .storybook",
-    "precommit": "npm run lint && npm test",
+    "precommit": "npm run lint && npm test && npm run coverage",
     "ava": "ava --verbose --require babel-register",
+    "coverage": "nyc check-coverage --lines 100, --functions 100, --branches 100",
     "test": "nyc npm run ava",
     "clean": "rimraf './public/*.+(js|css|html)'",
     "build": "webpack --config ./webpack.production.config.js --progress",

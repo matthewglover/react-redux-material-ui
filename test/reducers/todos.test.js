@@ -29,7 +29,12 @@ test('addTodo action adds a new todo to list', t => {
 test('addTodo action adds a new todo to end of list', t => {
   const todoAction = addTodo('second todo');
   const actual = todos(oneTodo, todoAction);
-  t.deepEqual(actual, [...oneTodo, { text: todoAction.text, id: todoAction.id, completed: false }]);
+  const expected = [
+    ...oneTodo,
+    { text: todoAction.text, id: todoAction.id, completed: false },
+  ];
+
+  t.deepEqual(actual, expected);
 });
 
 test('toggleTodo action flips completed status of todo with given id', t => {
@@ -38,5 +43,6 @@ test('toggleTodo action flips completed status of todo with given id', t => {
     { text: 'first todo', id: 'uuid1', completed: true },
     { text: 'second todo', id: 'uuid2', completed: false },
   ];
+
   t.deepEqual(actual, expected);
 });
