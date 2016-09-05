@@ -64,6 +64,10 @@ Travis-ci is setup for CI, which runs a linter and tests.
 On successful completion of the tests, code coverage data is sent to Coveralls and the application is deployed to [Heroku](https://react-redux-material-ui.herokuapp.com).
 
 
+### Git hooks
+
+Git hooks integrated via [husky](https://github.com/typicode/husky). Currently configured to run linter and tests prior to commit.
+
 ## Resources
 
 - [Some thoughts on testing React/Redux Applications](https://medium.com/javascript-inside/some-thoughts-on-testing-react-redux-applications-8571fbc1b78f#.3r96ole61)
