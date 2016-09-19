@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "storybook": "start-storybook -p 9001 -c .storybook",
-    "precommit": "npm run lint && npm test && npm run coverage",
+    "precommit": "npm run lint && npm run flow && npm test && npm run coverage",
     "ava": "ava --verbose --require babel-register",
     "coverage": "nyc check-coverage --lines 100, --functions 100, --branches 100",
     "test": "nyc npm run ava",
@@ -13,7 +13,8 @@
     "build": "webpack --config ./webpack.production.config.js --progress",
     "dev": "node webpack_server",
     "lint": "eslint './+(app|test)/**/*.js'",
-    "start": "node server"
+    "start": "node server",
+    "flow": "flow; test $? -eq 0 -o $? -eq 2"
   },
   "repository": {
     "type": "git",
@@ -26,6 +27,7 @@
   },
   "homepage": "https://github.com/matthewglover/react-redux-material-ui#readme",
   "devDependencies": {
+    "@kadira/storybook": "^2.9.1",
     "ava": "^0.16.0",
     "babel-eslint": "^6.1.2",
     "babel-loader": "^6.2.5",
@@ -39,10 +41,10 @@
     "eslint-plugin-jsx-a11y": "^2.1.0",
     "eslint-plugin-react": "^6.1.2",
     "extract-text-webpack-plugin": "^1.0.1",
+    "flow-bin": "^0.32.0",
     "html-webpack-plugin": "^2.22.0",
     "husky": "^0.11.6",
     "json-loader": "^0.5.4",
-    "@kadira/storybook": "^2.9.1",
     "node-sass": "^3.8.0",
     "nyc": "^8.1.0",
     "redux-devtools": "^3.0.1",

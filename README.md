@@ -38,7 +38,11 @@ Webpack hot module reloading implemented to work on changes to both React and Re
 
 This boilerplate uses ESLint with the AirBnB rules, modified to allow JSX in .js files.
 
-The AirBmB rules have also been modified to work better with AVA (primarily by using the babel-eslint parser).
+The AirBnB rules have also been modified to work better with AVA (primarily by using the babel-eslint parser).
+
+### Types
+
+The boilerplate supports [Flow Types](https://flowtype.org/). These are optional, so you can switched off if not required by removing from the pre-commit hook in package.json.
 
 ### Testing
 
